@@ -76,10 +76,12 @@
       </div><!-- end .dropdown -->
     </div><!-- end .column -->
   </div><!-- end .colu -->
+
   <!-- column 2 -->
   <div class="column">
     <h1 style="text-align:center;font-size: 3.33em;margin:0;padding:0;" id="logo">DJM</h1>
   </div>
+
   <!-- column 3 -->
   <div class="column">
     <div class="nav-right" style="float:right;display:block;">
@@ -92,7 +94,8 @@
     <button class="dropbtn" onclick="lightMode()">Light</button>
     </div>
   </div><!-- end column -->
-</div>
+</div><!-- end row -->
+
   <!-- CONTENT -->
   <div id="wrapper" style="max-width: 999px; margin: auto;text-align:left;padding:12px;">
     <h1 style="font-size: 4em;" >Starting From The Ground Up</h1>

@@ -3,6 +3,10 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+.*{
+  margin: 0;
+  padding: 0;
+}
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -48,7 +52,7 @@
 .column{
   float: left;
   width: 33.33%;
-  padding: 10px;
+  padding: 0px;
    /* Should be removed. Only for demonstration */
 }
 /* Clear floats after the columns */
@@ -61,7 +65,7 @@
 </head>
 <body>
 
-<div class="row">
+<div class="row" >
   <div class="column" >
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Menu</button>
@@ -69,30 +73,37 @@
 	<a href="#home">Home</a>
 	<a href="#about">About</a>
 	<a href="#contact">Contact</a>
-      </div>
+      </div><!-- end .dropdown -->
+    </div><!-- end .column -->
+  </div><!-- end .colu -->
 
-    </div>
-
-  </div>
-  <div class="column" >
-    <h1 style="text-align:center;">My Website 2018</h1>
+  <div class="column">
+    <h1 style="text-align:center;" id="logo">DJM</h1>
     
   </div>
   <div class="column">
-    <div class="nav-right" style="float:right;">
+    <div class="nav-right" style="float:right;display:block;">
     <!--
     <a href="#" style="">Contact Me</a>
     <a href="#" style="">About Me</a>
     <a href="#" style="">Subscribe</a>
     -->
-    <button  onclick="darkMode()">Dark Mode</button>
-    <button  onclick="lightMode()">Light Mode</button>
+    <button class="dropbtn" onclick="darkMode()">Dark</button>
+    <button class="dropbtn" onclick="lightMode()">Light</button>
     </div>
   </div><!-- end column -->
 </div>
-  <div class="wrapper" style="width:1000px; margin: 0 auto;">
+  <!-- CONTENT -->
+  <div id="wrapper" style="max-width: 777px; margin: auto;padding: 7px;text-align:left;">
+    <h1 style="font-size: 4em;padding: 0;margin-top:7px;margin:0;" >Start From The Ground Up</h1>
+    <p class="lead" style="font-size: 1.3em;margin: 0;margin-bottom:12px;">Empowering aspiring developers to make their content available on the web 
+freely and economically starting from the server to the front end site.</p>
+    <img src="lappy.jpg" style="width:100%;">
+    
+    <h2>Tutorials</h2>
+    
     <span><strong>Quick links:</strong> Commodities  Stocks  Rates & Bonds  Currencies  Futures  Economics  Fixed Income  ETFs  Sectors
-</span>
+    </span>
     
   </div><!-- end wrapper -->
 <script>
@@ -121,10 +132,17 @@ window.onclick = function(event) {
 </body>
 </script>
 <script>
+/* DARK MODE FUNCTION */
 function darkMode() {
+  document.getElementById("logo").style.color = "#ccc";
+  document.getElementById("wrapper").style.color = "#ccc";
   document.body.style.backgroundColor = "black";
 }
+
+/* LIGHT MODE FUNCTION */
 function lightMode() {
+  document.getElementById("logo").style.color = "black";
+  document.getElementById("wrapper").style.color = "black";
   document.body.style.backgroundColor = "white";
 }
 </script>
