@@ -3,7 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-.*{
+.
+.body{
   margin: 0;
   padding: 0;
 }
@@ -65,7 +66,7 @@
 </head>
 <body>
 <!-- column 1 -->
-<div class="row" >
+<div class="row" style="max-width: 999px; margin: auto; margin-bottom: 7px;">
   <div class="column" >
     <div class="dropdown">
       <button onclick="myFunction()" class="dropbtn">Menu</button>
@@ -92,13 +93,18 @@
     <button class="dropbtn" onclick="lightMode()">Light</button>
     </div>
   </div><!-- end column -->
-</div>
+</div><!-- end row -->
   <!-- CONTENT -->
+  <div id="bg-img" style="height: 333px; background: url(code.jpg) bottom; background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; padding: 0; margin: -9px;" >
+<!--  <img src="lappy.jpg" style="margin: 0; padding: 0;">-->
+  </div>
   <div id="wrapper" style="max-width: 999px; margin: auto;text-align:left;padding:12px;">
     <h1 style="font-size: 4em;" >Starting From The Ground Up</h1>
     <p class="lead" style="font-size: 1.3em;">Empowering aspiring developers to make their content available on the web 
 freely and economically starting from the server to the front end site.</p>
-    <img src="lappy.jpg" style="width:100%;">
     
     <h2>Tutorials</h2>
     
@@ -136,13 +142,16 @@ window.onclick = function(event) {
 function darkMode() {
   document.getElementById("logo").style.color = "#ccc";
   document.getElementById("wrapper").style.color = "#ccc";
+  document.getElementById("bg-img").style.backgroundImage = "url('code-light.jpg')";
   document.body.style.backgroundColor = "black";
+
 }
 
 /* LIGHT MODE FUNCTION */
 function lightMode() {
   document.getElementById("logo").style.color = "black";
   document.getElementById("wrapper").style.color = "black";
+  document.getElementById("bg-img").style.backgroundImage = "url('code.jpg')";
   document.body.style.backgroundColor = "white";
 }
 </script>
